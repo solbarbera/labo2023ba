@@ -144,6 +144,8 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
         sep = "",
         vmax_depth, "\t",
         vmin_split, "\t",
+        vcp, "\t",
+        vmin_bucket, "\t",
         ganancia_promedio, "\n"
       )
     }
