@@ -103,7 +103,7 @@ dataset <- dataset[clase_ternaria != ""]
 # HT  representa  Hiperparameter Tuning
 dir.create("./exp/", showWarnings = FALSE)
 dir.create("./exp/HT2020/", showWarnings = FALSE)
-archivo_salida <- "./exp/HT2020/gridsearch4.txt"
+archivo_salida <- "./exp/HT2020/gridsearch5.txt"
 
 # Escribo los titulos al archivo donde van a quedar los resultados
 # atencion que si ya existe el archivo, esta instruccion LO SOBREESCRIBE,
