@@ -102,8 +102,8 @@ dataset <- dataset[clase_ternaria != ""]
 # creo la carpeta donde va el experimento
 # HT  representa  Hiperparameter Tuning
 dir.create("./exp/", showWarnings = FALSE)
-dir.create("./exp/HT2020/", showWarnings = FALSE)
-archivo_salida <- "./exp/HT2020/gridsearch5.txt"
+dir.create("./exp/HT2021/", showWarnings = FALSE)
+archivo_salida <- "./exp/HT2021/gridsearch.txt"
 
 # Escribo los titulos al archivo donde van a quedar los resultados
 # atencion que si ya existe el archivo, esta instruccion LO SOBREESCRIBE,
@@ -124,7 +124,7 @@ cat(
 
 for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
   for (vmin_split in c(1000, 800, 600, 400, 200, 100, 50, 20, 10)) {
-    for (vcp in c(-0.5, -0.3, 0, 0.3, 0.5)) {
+    for (vcp in c(-0.5, -0.3, 0)) {
       for (vmin_bucket in c(500, 400, 300, 200, 50, 25, 10, 5)) {
       # notar como se agrega
 
