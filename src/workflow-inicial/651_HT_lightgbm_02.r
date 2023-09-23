@@ -85,7 +85,7 @@ PARAM$bo_lgb <- makeParamSet(
   makeDiscreteParam("early_stopping_rounds", values = c(10, 50, 100)),
   makeDiscreteParam("scale_pos_weight", values = c(10, 60, 130)),
   makeNumericParam("neg_bagging_fraction", lower = 0.0, upper = 0.9),
-  makeLogicalParam("extra_trees", TRUE, TRUE)
+  makeLogicalParam("extra_trees", values = c(0,1)) 
 )
 
 
