@@ -56,7 +56,7 @@ PARAM$lgb_basicos <- list(
   num_iterations = 9999, # un numero muy grande, lo limita early_stopping_rounds
 
   bagging_fraction = 1.0, # 0.0 < bagging_fraction <= 1.0
-  pos_bagging_fraction = 1.0, # 0.0 < pos_bagging_fraction <= 1.0
+  # pos_bagging_fraction = 1.0, # 0.0 < pos_bagging_fraction <= 1.0
   # neg_bagging_fraction = 1.0, # 0.0 < neg_bagging_fraction <= 1.0
   is_unbalance = FALSE, #
   # scale_pos_weight = 1.0, # scale_pos_weight > 0.0
@@ -65,7 +65,7 @@ PARAM$lgb_basicos <- list(
   max_drop = 50, # <=0 means no limit
   skip_drop = 0.5, # 0.0 <= skip_drop <= 1.0
 
-  # extra_trees = TRUE, # Magic Sauce
+  extra_trees = TRUE, # Magic Sauce
 
   seed = PARAM$lgb_semilla
 )
@@ -85,7 +85,7 @@ PARAM$bo_lgb <- makeParamSet(
   makeDiscreteParam("early_stopping_rounds", values = c(10, 50, 100)),
   makeDiscreteParam("scale_pos_weight", values = c(10, 60, 130)),
   makeNumericParam("neg_bagging_fraction", lower = 0.0, upper = 0.9),
-  makeLogicalParam("extra_trees", values = c(0,1)) 
+  makeLogicalParam("pos_bagging_fraction", lower = 0.8, upper = 1.0)
 )
 
 
