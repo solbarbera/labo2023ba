@@ -81,9 +81,9 @@ PARAM$bo_lgb <- makeParamSet(
   makeNumericParam("min_gain_to_split", lower = 0.00, upper = 0.5),
   makeNumericParam("lambda_l1", lower = 0.00, upper = 10.00),
   makeNumericParam("lambda_l2", lower = 0.00, upper = 10.00),
-  makeDiscreteParam("max_depth", values = c(-1, 5, 7)),
-  makeDiscreteParam("early_stopping_rounds", values = c(10, 50, 100)),
-  makeDiscreteParam("scale_pos_weight", values = c(10, 60, 130)),
+  makeIntegerParam("max_depth", lower = 3L, upper = 7L),
+  makeIntegerParam("early_stopping_rounds", lower = 10L, upper = 100L),
+  makeIntegerParam("scale_pos_weight", lower = 10L, upper = 130L),
   makeNumericParam("neg_bagging_fraction", lower = 0.0, upper = 0.9),
   makeNumericParam("pos_bagging_fraction", lower = 0.8, upper = 1.0)
 )
